@@ -1,14 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Employee } from "../types";
+import { User } from "../types";
 import { FaSpinner } from "react-icons/fa6";
 
-const backendUrl = "http://localhost:4233";
-const token = "4321";
+const backendUrl = "http://localhost:3388";
+const token = "abcde12345";
 
 export const PageReadApi = () => {
 	const [appName, setAppName] = useState("");
-	const [employees, setEmployees] = useState<Employee[]>([]);
+	const [users, setUsers] = useState<User[]>([]);
 	const [routesLoaded, setRoutesLoaded] = useState(0);
 	const [errorMessage, setErrorMessage] = useState("");
 
@@ -36,21 +36,28 @@ export const PageReadApi = () => {
 		(async () => {
 			// Version with AXIOS
 			try {
-				const response = await axios.get(`${backendUrl}/employees`, {
+				const response = await axios.get(`${backendUrl}/users`, {
 					headers: {
 						Authorization: `Bearer ${token}`,
 					},
 				});
 				const data = response.data;
-				setEmployees(data);
+				setUsers(data);
 			} catch (error: unknown) {
-				if (typeof error === "object" && error !== null && "response" in error) {
-					const axiosError = error as { response?: { data?: { error?: string } } };
+				if (
+					typeof error === "object" &&
+					error !== null &&
+					"response" in error
+				) {
+					const axiosError = error as {
+						response?: { data?: { error?: string } };
+					};
 					setErrorMessage(
-						axiosError.response?.data?.error || "Error fetching employees"
+						axiosError.response?.data?.error ||
+							"Error fetching users"
 					);
 				} else {
-					setErrorMessage("Unknown error fetching employees");
+					setErrorMessage("Unknown error fetching users");
 				}
 			}
 			setTimeout(() => {
@@ -78,15 +85,15 @@ export const PageReadApi = () => {
 									{appName}
 								</span>
 							</p>
-							<p>There are {employees.length} Employees:</p>
+							<p>There are {users.length} users:</p>
 							<ul className="list-disc list-inside ml-3">
-								{employees.map((emp) => (
+								{users.map((user) => (
 									<li
-										key={emp.id}
+										key={user.id}
 										className="font-mono text-orange-950 font-semibold"
 									>
-										<span className="">{emp.name}</span> -{" "}
-										{emp.position}
+										<span className="">{user.name}</span> -{" "}
+										{user.position}
 									</li>
 								))}
 							</ul>

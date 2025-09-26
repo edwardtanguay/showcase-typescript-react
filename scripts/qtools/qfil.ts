@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as qcli from "./qcli";
+import * as path from "path";
 
 /**
  * Reads a file and returns its lines as an array of strings.
@@ -150,5 +151,11 @@ export const saveArrayOfObjectsToJsonFile = (
 			`Error saving objects to ${jsonFileName}: ${error.message}`,
 			"error"
 		);
+	}
+};
+
+export const forceDirectoryToExists = (pathAndFileName: string): void => {
+	if (!fs.existsSync(pathAndFileName)) {
+		fs.mkdirSync(path.dirname(pathAndFileName), { recursive: true });
 	}
 };

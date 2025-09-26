@@ -1,0 +1,45 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 2em;
+	background-color: #333;
+	color: #ccc;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 8px;
+	width: 100%;
+}
+th,
+td {
+	padding: 8px;
+	text-align: left;
+	background: #222;
+}
+th {
+	background: #444;
+}
+
+/* Hide the Mobile container by default (Computer/Wide view) */
+#mobile-content-container {
+	display: none;
+}
+
+/* Show the Mobile container only when screen width is max 400px */
+@media (max-width: 400px) {
+	#mobile-content-container {
+		display: block;
+	}
+	#computer-content-container {
+		display: none;
+	}
+}
+
+/* Show the Computer container only when screen width is min 401px */
+@media (min-width: 401px) {
+	#mobile-content-container {
+		display: none;
+	}
+	#computer-content-container {
+		display: block;
+	}
+}

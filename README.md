@@ -9,16 +9,29 @@ This is a site to experiment with TypeScript CLI, APIs and a React frontend.
 
 ## Set up frontend
 
-- `npm i`
-- `npm run dev`
+-   `npm i`
+-   `npm run dev`
+
+## Create .env file
+
+```
+PORT=3388
+TOKEN=abcde12345
+```
 
 ## npm scripts
 
-- `npm run cp` - create page
-- `npm run pd` - parse data 
-- `npm run gh` - GitHub commit log
-- `npm run backup` - backup site in ../BACKUP folder (as .zip file without node_modules)
+-   `npm run api` - start API
+-   `npm run cp` - create page
+-   `npm run pd` - parse data
+-   `npm run gh` - GitHub commit log
+-   `npm run backup` - backup site in ../BACKUP folder (as .zip file without node_modules)
 
+## Report generator
+
+-   `npm run api` - start API
+-   `npm run gsr` - generate report
+- look at generated report here: `backend\reports\output\shift-report.html`
 ## More Datapod templates and sites
 
 https://datapod-tanguay-eu.vercel.app

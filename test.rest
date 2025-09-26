@@ -1,7 +1,18 @@
-@url = http://localhost:4233
+@url = http://localhost:3388
+@token = abcde12345
 
 ### GET VERSION INFO
 GET {{url}}/
+Authorization: Bearer {{token}}
 
 ### GET EMPLOYEE INFO
 GET {{url}}/employees
+Authorization: Bearer {{token}}
+
+### GET USER INFO
+GET {{url}}/users
+Authorization: Bearer {{token}}
+
+### GET SHIFT INFO
+GET {{url}}/shifts
+Authorization: Bearer {{token}}

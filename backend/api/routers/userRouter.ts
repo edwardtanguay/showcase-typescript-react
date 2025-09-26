@@ -1,8 +1,9 @@
 import { Router } from "express";
+import * as config from "./../config";
 
-export const employeeRouter = Router();
+export const userRouter = Router();
 
-employeeRouter.get("/", (req, res) => {
+userRouter.get("/", (req, res) => {
 	const authHeader = req.headers.authorization;
 	if (!authHeader || !authHeader.startsWith("Bearer ")) {
 		return res
@@ -10,7 +11,7 @@ employeeRouter.get("/", (req, res) => {
 			.json({ error: "Unauthorized: No token provided" });
 	}
 	const token = authHeader.split(" ")[1];
-	if (token !== "4321") {
+	if (token !== config.getToken()) {
 		return res.status(403).json({ error: "Forbidden: Invalid token" });
 	}
 	res.json([

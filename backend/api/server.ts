@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import { employeeRouter } from "./routers/employeeRouter";
+import { userRouter } from "./routers/userRouter";
+import { shiftRouter } from "./routers/shiftRouter";
+import * as config from './config'
 
 export const app = express();
 app.use(express.json());
@@ -14,7 +17,7 @@ app.get("/", (req, res) => {
 			.json({ error: "Unauthorized: No token provided" });
 	}
 	const token = authHeader.split(" ")[1];
-	if (token !== "4321") {
+	if (config.getToken() !== token) {
 		return res.status(403).json({ error: "Forbidden: Invalid token" });
 	}
 
@@ -24,3 +27,5 @@ app.get("/", (req, res) => {
 });
 
 app.use("/employees", employeeRouter);
+app.use("/users", userRouter);
+app.use("/shifts", shiftRouter);
