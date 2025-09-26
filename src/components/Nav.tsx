@@ -15,6 +15,10 @@ const menuItems = [
 		title: "Read JSON",
 	},
 	{
+		idCode: "read-api",
+		title: "Read API",
+	},
+	{
 		idCode: "about",
 		title: "About",
 	},

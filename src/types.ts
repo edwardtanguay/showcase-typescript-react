@@ -21,3 +21,10 @@ export const FrontendFlashcardSchema = FlashcardSchema.extend({
 
 export type Flashcard = z.infer<typeof FlashcardSchema>;
 export type FrontendFlashcard = z.infer<typeof FrontendFlashcardSchema>;
+
+
+export type Employee = {
+	id: number;
+	name: string;
+	position: string;
+}

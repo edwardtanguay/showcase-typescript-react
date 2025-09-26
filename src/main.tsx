@@ -8,6 +8,7 @@ import { Page404 } from "./pages/Page404.tsx";
 import { StoreProvider } from 'easy-peasy';
 import { store } from './store/store.ts';
 import { PageReadJson } from "./pages/PageReadJson.tsx";
+import { PageReadApi } from "./pages/PageReadApi.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: "read-json",
 				element: <PageReadJson />,
+			},
+			{
+				path: "read-api",
+				element: <PageReadApi />
 			},
 			{
 				path: "about",

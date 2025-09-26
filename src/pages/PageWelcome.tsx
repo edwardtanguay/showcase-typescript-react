@@ -1,4 +1,3 @@
-import { FlashcardArea } from "../components/FlashcardArea";
 import { useTypedStoreState } from "../store/hooks";
 
 export const PageWelcome = () => {
@@ -7,7 +6,6 @@ export const PageWelcome = () => {
 	return (
 		<>
 			<p className="mb-3">{message}</p>
-			<FlashcardArea />
 		</>
 	);
 };

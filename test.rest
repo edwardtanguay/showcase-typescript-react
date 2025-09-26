@@ -1,0 +1,7 @@
+@url = http://localhost:4233
+
+### GET VERSION INFO
+GET {{url}}/
+
+### GET EMPLOYEE INFO
+GET {{url}}/employees
