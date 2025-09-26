@@ -11,8 +11,8 @@ const menuItems = [
 		title: "Welcome",
 	},
 	{
-		idCode: "info",
-		title: "Info",
+		idCode: "read-json",
+		title: "Read JSON",
 	},
 	{
 		idCode: "about",
