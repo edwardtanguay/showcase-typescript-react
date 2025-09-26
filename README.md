@@ -1,6 +1,6 @@
-# datapod-typescript-react
+# showcase-typescript-react
 
-This is a simple datapod template for a local site that displays data from a JSON file, which is created by a TypeScript CLI script that parses a text file.
+This is a site to experiment with TypeScript CLI, APIs and a React frontend.
 
 ## Compatibility
 
