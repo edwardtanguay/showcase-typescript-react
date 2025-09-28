@@ -27,11 +27,17 @@ TOKEN=abcde12345
 -   `npm run gh` - GitHub commit log
 -   `npm run backup` - backup site in ../BACKUP folder (as .zip file without node_modules)
 
+## API route testing
+
+-   install [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+-   in `test.rest`, click on **send request**
+
 ## Report generator
 
 -   `npm run api` - start API
 -   `npm run gsr` - generate report
-- look at generated report here: `backend\reports\output\shift-report.html`
+-   look at generated report here: `backend\reports\output\shift-report.html`
+
 ## More Datapod templates and sites
 
 https://datapod-tanguay-eu.vercel.app

@@ -1,5 +1,5 @@
-@url = http://localhost:3388
-@token = abcde12345
+@url = {{$dotenv API_URL}}
+@token = {{$dotenv TOKEN}}
 
 ### GET VERSION INFO
 GET {{url}}/
