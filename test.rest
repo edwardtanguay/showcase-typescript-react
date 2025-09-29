@@ -1,4 +1,4 @@
-@url = {{$dotenv API_URL}}
+@url = http://localhost:{{$dotenv PORT}}
 @token = {{$dotenv TOKEN}}
 
 ### GET VERSION INFO
