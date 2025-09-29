@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { User } from "../types";
 import { FaSpinner } from "react-icons/fa6";
 
-const backendUrl = "http://localhost:3388";
+const backendUrl = "http://localhost:3399";
 const token = "abcde12345";
 
 export const PageReadApi = () => {
