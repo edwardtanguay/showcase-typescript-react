@@ -1,4 +1,4 @@
-import * as config from './config'
+import * as config from '../config'
 import { app } from './server'
 
 app.listen(config.getPort(), () => {

@@ -27,3 +27,10 @@ export type User = {
 	name: string;
 	position: string;
 };
+
+export type Employee = {
+	id: number;
+	firstName: string;
+	lastName: string;
+	age: number;
+};

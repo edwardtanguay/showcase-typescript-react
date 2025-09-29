@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as config from './../config'
+import * as config from '../../config'
 
 export const employeeRouter = Router();
 
@@ -15,12 +15,12 @@ employeeRouter.get("/", (req, res) => {
 		return res.status(403).json({ error: "Forbidden: Invalid token" });
 	}
 	res.json([
-		{ id: 1, firstName: "Max", lastName: "Rochet" },
-		{ id: 2, firstName: "Julia", lastName: "Schneider" },
-		{ id: 3, firstName: "Lena", lastName: "Fischer" },
-		{ id: 4, firstName: "Thomas", lastName: "Weber" },
-		{ id: 5, firstName: "Sophie", lastName: "Meyer" },
-		{ id: 6, firstName: "Leon", lastName: "Wagner" },
-		{ id: 7, firstName: "Anna", lastName: "Becker" },
+		{ id: 1, firstName: "Max", lastName: "Rochet", age: 29 },
+		{ id: 2, firstName: "Julia", lastName: "Schneider", age: 34 },
+		{ id: 3, firstName: "Lena", lastName: "Fischer", age: 28 },
+		{ id: 4, firstName: "Thomas", lastName: "Weber", age: 45 },
+		{ id: 5, firstName: "Sophie", lastName: "Meyer", age: 31 },
+		{ id: 6, firstName: "Leon", lastName: "Wagner", age: 26 },
+		{ id: 7, firstName: "Anna", lastName: "Becker", age: 38 },
 	]);
 });

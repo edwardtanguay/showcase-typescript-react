@@ -1,7 +1,7 @@
-import * as config from "./../api/config";
+import * as config from "./../config"
 import axios from "axios";
 
-export const getItems = async <T>(route:string): Promise<T[]> => {
+export const getItems = async <T>(route: string): Promise<T[]> => {
 	return new Promise<T[]>((resolve, reject) => {
 		const backendUrl = `http://localhost:${config.getPort()}`;
 		const token = config.getToken();

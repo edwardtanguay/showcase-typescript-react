@@ -3,7 +3,7 @@ import cors from "cors";
 import { employeeRouter } from "./routers/employeeRouter";
 import { userRouter } from "./routers/userRouter";
 import { shiftRouter } from "./routers/shiftRouter";
-import * as config from './config'
+import * as config from '../config'
 
 export const app = express();
 app.use(express.json());

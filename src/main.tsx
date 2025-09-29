@@ -1,14 +1,19 @@
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
 import "./index.scss";
 import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
-import { StoreProvider } from 'easy-peasy';
-import { store } from './store/store.ts';
+import { StoreProvider } from "easy-peasy";
+import { store } from "./store/store.ts";
 import { PageReadJson } from "./pages/PageReadJson.tsx";
 import { PageReadApi } from "./pages/PageReadApi.tsx";
+import { PageCrudApi } from "./pages/PageCrudApi.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -26,7 +31,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "read-api",
-				element: <PageReadApi />
+				element: <PageReadApi />,
+			},
+			{
+				path: "crud-api",
+				element: <PageCrudApi />,
 			},
 			{
 				path: "about",
