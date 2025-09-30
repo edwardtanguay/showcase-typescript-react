@@ -19,7 +19,7 @@
 	},
 	"nodemonConfig": {
 		"watch": [
-			"api"
+			"backend"
 		],
 		"ext": "ts, json",
 		"exec": "tsx backend/api/index.ts"

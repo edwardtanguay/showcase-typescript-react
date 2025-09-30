@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Employee } from "../types";
 import { FaSpinner } from "react-icons/fa6";
 import * as config from "../config";
+import { TestCrudPost } from "../components/TestCrudPost";
+import { TestCrudDelete } from "../components/TestCrudDelete";
 
 const backendUrl = config.backendUrl();
 const token = config.getToken();
@@ -33,7 +35,7 @@ export const PageCrudApi = () => {
 					};
 					setErrorMessage(
 						axiosError.response?.data?.error ||
-							"Error fetching employees"
+						"Error fetching employees"
 					);
 				} else {
 					setErrorMessage("Unknown error fetching employees");
@@ -76,6 +78,9 @@ export const PageCrudApi = () => {
 					)}
 				</>
 			)}
+
+			<TestCrudPost />
+			<TestCrudDelete setErrorMessage={setErrorMessage} />
 		</>
 	);
 };

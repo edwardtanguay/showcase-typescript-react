@@ -5,10 +5,6 @@
 GET {{url}}/
 Authorization: Bearer {{token}}
 
-### GET EMPLOYEE INFO
-GET {{url}}/employees
-Authorization: Bearer {{token}}
-
 ### GET USER INFO
 GET {{url}}/users
 Authorization: Bearer {{token}}
@@ -16,6 +12,43 @@ Authorization: Bearer {{token}}
 ### GET SHIFT INFO
 GET {{url}}/shifts
 Authorization: Bearer {{token}}
+
+### === CRUD =======================
+
+### GET EMPLOYEES
+GET {{url}}/employees
+Authorization: Bearer {{token}}
+
+### GET EMPLOYEE
+GET {{url}}/employees/5
+Authorization: Bearer {{token}}
+
+### CREATE EMPLOYEE
+POST {{url}}/employees
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+	"firstName": "Ralf",
+	"lastName": "Zenter",
+	"age": 30
+}
+
+### REPLACE EMPLOYEE
+PUT {{url}}/employees/43
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+	"firstName": "Ralf",
+	"lastName": "Replacente",
+	"age": 88
+}
+
+### DELETE EMPLOYEE
+DELETE {{url}}/employees/2
+Authorization: Bearer {{token}}
+
 
 ### === NORTHWIND ====================
 
