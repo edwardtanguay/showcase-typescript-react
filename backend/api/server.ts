@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { employeeRouter } from "./routers/employeeRouter";
+import { northwindRouter } from "./routers/northwindRouter";
 import { userRouter } from "./routers/userRouter";
 import { shiftRouter } from "./routers/shiftRouter";
 import * as config from '../config'
@@ -27,5 +28,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/employees", employeeRouter);
+app.use("/northwind", northwindRouter);
 app.use("/users", userRouter);
 app.use("/shifts", shiftRouter);

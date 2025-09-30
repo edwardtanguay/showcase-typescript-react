@@ -1,5 +1,5 @@
-@url = http://localhost:{{$dotenv PORT}}
-@token = {{$dotenv TOKEN}}
+@url = http://localhost:{{$dotenv VITE_PORT}}
+@token = {{$dotenv VITE_TOKEN}}
 
 ### GET VERSION INFO
 GET {{url}}/
@@ -15,4 +15,38 @@ Authorization: Bearer {{token}}
 
 ### GET SHIFT INFO
 GET {{url}}/shifts
+Authorization: Bearer {{token}}
+
+### === NORTHWIND ====================
+
+### NORTHWIND CATEGORIES
+GET {{url}}/northwind/categories
+Authorization: Bearer {{token}}
+
+### NORTHWIND CUSTOMERS
+GET {{url}}/northwind/customers
+Authorization: Bearer {{token}}
+
+### NORTHWIND EMPLOYEES
+GET {{url}}/northwind/employees
+Authorization: Bearer {{token}}
+
+### NORTHWIND ORDERS
+GET {{url}}/northwind/orders
+Authorization: Bearer {{token}}
+
+### NORTHWIND PRODUCTS
+GET {{url}}/northwind/products
+Authorization: Bearer {{token}}
+
+### NORTHWIND REGIONS
+GET {{url}}/northwind/regions
+Authorization: Bearer {{token}}
+
+### NORTHWIND SHIPPERS
+GET {{url}}/northwind/shippers
+Authorization: Bearer {{token}}
+
+### NORTHWIND SUPPLIERS
+GET {{url}}/northwind/suppliers
 Authorization: Bearer {{token}}
