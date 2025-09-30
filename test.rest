@@ -20,7 +20,7 @@ GET {{url}}/employees
 Authorization: Bearer {{token}}
 
 ### GET EMPLOYEE
-GET {{url}}/employees/5
+GET {{url}}/employees/1
 Authorization: Bearer {{token}}
 
 ### CREATE EMPLOYEE
@@ -29,25 +29,25 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-	"firstName": "Ralf",
+	"firstName": "Ralf2",
 	"lastName": "Zenter",
 	"age": 30
 }
 
+### DELETE EMPLOYEE
+DELETE {{url}}/employees/6
+Authorization: Bearer {{token}}
+
 ### REPLACE EMPLOYEE
-PUT {{url}}/employees/43
+PUT {{url}}/employees/2
 Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
 	"firstName": "Ralf",
-	"lastName": "Replacente",
-	"age": 88
+	"lastName": "Indexer",
+	"age": 34
 }
-
-### DELETE EMPLOYEE
-DELETE {{url}}/employees/2
-Authorization: Bearer {{token}}
 
 
 ### === NORTHWIND ====================
