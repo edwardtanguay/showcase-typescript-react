@@ -15,8 +15,8 @@ This is a site to experiment with TypeScript CLI, APIs and a React frontend.
 ## Create .env file
 
 ```
-PORT=3399
-TOKEN=abcde12345
+VITE_PORT=3399
+VITE_TOKEN=abcde12345
 ```
 
 ## npm scripts
