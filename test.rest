@@ -29,17 +29,17 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-	"firstName": "Ralf2",
+	"firstName": "Ralf4",
 	"lastName": "Zenter",
 	"age": 30
 }
 
 ### DELETE EMPLOYEE
-DELETE {{url}}/employees/6
+DELETE {{url}}/employees/7
 Authorization: Bearer {{token}}
 
 ### REPLACE EMPLOYEE
-PUT {{url}}/employees/2
+PUT {{url}}/employees/21
 Authorization: Bearer {{token}}
 Content-Type: application/json
 

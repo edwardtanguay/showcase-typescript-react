@@ -9,7 +9,9 @@ employeeRouter.get("/", authenticateToken, async (req, res) => {
 		const employees = await dbService.getEmployees();
 		res.status(200).json(employees);
 	} catch (error) {
-		res.status(500).json({ error: "GET /employees fetch error: " + error.message });
+		res.status(500).json({
+			error: "GET /employees fetch error: " + error.message,
+		});
 	}
 });
 
@@ -57,6 +59,9 @@ employeeRouter.put("/:id", authenticateToken, async (req, res) => {
 		}
 		res.status(200).json(result);
 	} catch (error) {
-		res.status(500).json({ error: "Error updating employee:" });
+		console.log(error);
+		res.status(500).json({
+			error: "Error updating employee:" + error.message,
+		});
 	}
 });

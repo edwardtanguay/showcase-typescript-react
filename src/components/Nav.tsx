@@ -19,6 +19,10 @@ const menuItems = [
 		title: "Read API",
 	},
 	{
+		idCode: "crud",
+		title: "CRUD",
+	},
+	{
 		idCode: "crud-api",
 		title: "CRUD API",
 	},

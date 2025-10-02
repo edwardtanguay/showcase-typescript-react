@@ -28,9 +28,24 @@ export type User = {
 	position: string;
 };
 
-export type Employee = {
+export interface ItemType {
+	id: number;
+}
+
+export interface UiItemType {
+	item: ItemType;
+	originalEmployee: Employee;
+	isDeleting: boolean;
+	isEditing: boolean;
+}
+
+export interface Employee extends ItemType {
 	id: number;
 	firstName: string;
 	lastName: string;
 	age: number;
-};
+}
+
+export interface UiEmployee extends UiItemType {
+	item: Employee;
+}

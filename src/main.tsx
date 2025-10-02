@@ -14,6 +14,7 @@ import { store } from "./store/store.ts";
 import { PageReadJson } from "./pages/PageReadJson.tsx";
 import { PageReadApi } from "./pages/PageReadApi.tsx";
 import { PageCrudApi } from "./pages/PageCrudApi.tsx";
+import { PageCrud } from "./pages/PageCrud/PageCrud.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 			{
 				path: "crud-api",
 				element: <PageCrudApi />,
+			},
+			{
+				path: "crud",
+				element: <PageCrud />,
 			},
 			{
 				path: "about",
